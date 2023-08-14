@@ -5,9 +5,19 @@ const Tenent = () => {
   return (
     <>
       <div className="col">
-      <h2>Tenent List</h2>
+     
         <table className="table bg-white rounded shadow-sm table-hover">
-          <thead>
+        <thead>
+            <tr>
+              <th colSpan="6">
+                <div className="heading-wrapper">
+                  <h2 className="tenent-heading">Tenent</h2>
+                  <button className="btn btn-success add-button">
+                    <i className="fa fa-plus"></i>
+                  </button>
+                </div>
+              </th>
+            </tr>
             <tr>
               <th scope="col" width="50">#</th>
               <th scope="col">Tenent Code</th>
@@ -17,6 +27,7 @@ const Tenent = () => {
               <th scope="col">Action</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <th scope="row">1</th>
