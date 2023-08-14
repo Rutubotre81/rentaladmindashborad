@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Sidebar from './components/sidebarfile/Sidebar';
+import Header from './components/headerfile/Header';
+import Middle from './components/middlepart/Middle';
+// import Profile from './components/dropdownmenu/Profile';
+// import Settings from './components/dropdownmenu/Settings';
+import Tenent from './components/Sidebarmenu/Tenent';
 
-function App() {
+const App = () => {
+  const [isSidebarToggled, setIsSidebarToggled] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setIsSidebarToggled(!isSidebarToggled);
+  };
+
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
+        <Sidebar/> {/* Pass openDashboard function to Sidebar */}
+        <div id="page-content-wrapper">
+          <Header/>
+           <Middle />
+           <Tenent/>
+           {/* <Profile/> */}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+
+
 
 export default App;

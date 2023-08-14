@@ -1,0 +1,71 @@
+/* Profile.css */
+
+/* Custom styling for placing fields side by side */
+.form-row .col-md-6 {
+  display: inline-block;
+  width: calc(50% - 15px);
+  margin-right: 15px;
+  margin-bottom: 1rem;
+}
+
+.form-row .col-md-6:last-child {
+  margin-right: 0;
+}
+
+/* Styling for the profile picture section */
+.profile-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.-label {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.glyphicon {
+  margin-right: 0.5rem;
+}
+
+#file {
+  display: none;
+}
+
+#output {
+  margin-top: 1rem;
+  max-width: 100%;
+}
+/* Profile.css */
+
+/* Custom styling for placing fields side by side */
+/* .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.75rem; /* Adjust margin as needed */
+
+
+/* .form-row .col-md-4 {
+  flex: 1;
+  padding: 0.75rem; /* Adjust padding as needed */
+ */ */
+/* Profile.css */
+
+/* Custom styling for placing full name inputs in one line */
+.name-inputs {
+  display: flex;
+  align-items: baseline;
+}
+
+.name-inputs .form-control {
+  flex: 1;
+  margin-right: 5px; /* Add margin between inputs */
+}
+
