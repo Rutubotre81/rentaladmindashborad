@@ -1,19 +1,18 @@
 import React from "react";
 import './style.css';
 
-const Tenent = () => {
+const Property = () => {
   return (
-    <>
-    <div className="row my-5">
-          <h3 className="fs-4 mb-3"></h3>
+    <><div className="row my-5">
+    <h3 className="fs-4 mb-3"></h3>
       <div className="col">
      
         <table className="table bg-white rounded shadow-sm table-hover">
-        <thead>
+          <thead>
             <tr>
               <th colSpan="6">
                 <div className="heading-wrapper">
-                  <h2 className="tenent-heading">Tenent</h2>
+                  <h2 className="property-heading">Property</h2>
                   <button className="btn btn-success add-button">
                     <i className="fa fa-plus"></i>
                   </button>
@@ -22,10 +21,8 @@ const Tenent = () => {
             </tr>
             <tr>
               <th scope="col" width="50">#</th>
-              <th scope="col">Tenent Code</th>
+              <th scope="col">Property Code</th>
               <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Mobile no</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -35,10 +32,8 @@ const Tenent = () => {
               <th scope="row">1</th>
               <td>45</td>
               <td>Jonny</td>
-              <td>botre@gmail.com</td>
-              <td>911275654435</td>
               <td>
-              <span className="btn btn-link text-primary">
+                <span className="btn btn-link text-primary">
                   <i className="fas fa-eye"></i>
                 </span>
                 <span className="btn btn-link text-warning">
@@ -53,10 +48,8 @@ const Tenent = () => {
               <th scope="row">2</th>
               <td>46</td>
               <td>Jane</td>
-              <td>jane@example.com</td>
-              <td>911234567890</td>
               <td>
-              <span className="btn btn-link text-primary">
+                <span className="btn btn-link text-primary">
                   <i className="fas fa-eye"></i>
                 </span>
                 <span className="btn btn-link text-warning">
@@ -72,8 +65,9 @@ const Tenent = () => {
         </table>
       </div>
       </div>
+    
     </>
   );
 };
 
-export default Tenent;
+export default Property;
