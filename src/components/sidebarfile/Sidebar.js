@@ -16,29 +16,14 @@ const Sidebar=()=>
 
           <Link to="/" className="list-group-item list-group-item-action bg-transparent second-text active" >
          <i className="fas fa-tachometer-alt me-2"  ></i>Dashboard
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-project-diagram me-2"></i>Projects
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-chart-line me-2"></i>Analytics
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-paperclip me-2"></i>Reports
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-shopping-cart me-2"></i>Store Mng
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-gift me-2"></i>Products
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-comment-dots me-2"></i>Chat
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-          <i className="fas fa-map-marker-alt me-2"></i>Outlet
-        </a>
-        <a href="#" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+         </Link>
+         <Link to="/property" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+          <i className="fas fa-project-diagram me-2"></i>Property
+          </Link>
+          <Link to="/tenant" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+          <i className="fas fa-chart-line me-2"></i>Tenant
+          </Link>
+          <Link to="/logout" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
           <i className="fas fa-power-off me-2"></i>Logout
         </Link>
      </div>
