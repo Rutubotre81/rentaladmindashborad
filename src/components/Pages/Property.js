@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import Middle from './middlepart/Middle'
-import Sidebar from './sidebarfile/Sidebar';
-import Header from './headerfile/Header';
+import Sidebar from '../sidebarfile/Sidebar';
+import Header from '../headerfile/Header';
 
 const Property = () => {
     const [isSidebarToggled, setIsSidebarToggled] = useState(false);
@@ -13,7 +12,7 @@ const Property = () => {
   return (
     <div className="App">
     <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
-      <Sidebar/> {/* Pass openDashboard function to Sidebar */}
+      <Sidebar/> 
       <div id="page-content-wrapper">
         <Header/>
      <div className="container-fluid px-4">

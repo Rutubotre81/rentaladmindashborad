@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import '../App.css';
-import Sidebar from './sidebarfile/Sidebar';
-import Header from './headerfile/Header';
-import Middle from './middlepart/Middle';
-// import Profile from './components/dropdownmenu/Profile';
-// import Settings from './components/dropdownmenu/Settings';
-import Tenent from './Sidebarmenu/Tenent';
+import Sidebar from '../sidebarfile/Sidebar';
+import Header from '../headerfile/Header';
+import Middle from '../middlepart/Middle';
+import Tenent from './Tenant';
 
 const Home = () => {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
@@ -23,8 +20,6 @@ const Home = () => {
         <div id="page-content-wrapper">
           <Header/>
            <Middle />
-           <Tenent/>
-           {/* <Profile/> */}
         </div>
       </div>
     </div>
