@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import Tenant from './Tenant';
-import Property from './Property';
+import Home from './Pages/Home';
+import Tenant from './Pages/Tenant';
+import Property from './Pages/Property';
 
 
 const DashboardLayout = () => {

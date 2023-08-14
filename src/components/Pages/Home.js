@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Sidebar from './sidebarfile/Sidebar';
-import Header from './headerfile/Header';
+import Sidebar from '../sidebarfile/Sidebar';
+import Header from '../headerfile/Header';
+import Middle from '../middlepart/Middle';
+import Tenent from './Tenant';
 
-import Property from './Sidebarmenu/Property';
-
-const Tenant = () => {
+const Home = () => {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
 
   const handleToggleSidebar = () => {
@@ -18,9 +18,8 @@ const Tenant = () => {
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar/> {/* Pass openDashboard function to Sidebar */}
         <div id="page-content-wrapper">
-            <Header/>
-           <Property/>
-           {/* <Profile/> */}
+          <Header/>
+           <Middle />
         </div>
       </div>
     </div>
@@ -30,4 +29,4 @@ const Tenant = () => {
 
 
 
-export default Tenant;
+export default Home;
