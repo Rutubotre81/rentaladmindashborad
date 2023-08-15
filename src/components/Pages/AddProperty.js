@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import './style.css';
 
 
-const Tenant=()=>{
+const   AddProperty=()=>{
     const [isSidebarToggled, setIsSidebarToggled] = useState(false);
     
     const [newProperty, setNewProperty] = useState({
@@ -71,4 +71,4 @@ const Tenant=()=>{
     );
 };
 
-export default Property;
+export default AddProperty;

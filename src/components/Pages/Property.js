@@ -96,7 +96,7 @@ const Property = () => {
               </tbody>
             </table>
           </div>
-          <Outlet />
+          <Outlet/>
         </div>
       </div>
     </div>

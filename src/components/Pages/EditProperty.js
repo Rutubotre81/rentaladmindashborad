@@ -10,6 +10,8 @@ const EditProperty =()=>
     const {id}= useParams();
     const navigate= useNavigate();
 
+    const [isSidebarToggled, setIsSidebarToggled] = useState(false);
+
     const [property ,setProperty] = useState({
         PropertyCode: '',
         Type: '',
@@ -21,7 +23,7 @@ const EditProperty =()=>
 
     const handleInputChange = event => {
         const { name, value } = event.target;
-        setTenant(prevProperty => ({
+        setProperty(prevProperty => ({
           ...prevProperty,
           [name]: value
         }));
