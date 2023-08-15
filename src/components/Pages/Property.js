@@ -45,6 +45,9 @@ const Property = () => {
           <Header />
           <div className="col">
             {/* Display property list */}
+
+
+            {!window.location.pathname.includes('/tenants/') ? ( 
             <table className="table bg-white rounded shadow-sm table-hover">
               <thead>
               <tr>
@@ -95,8 +98,12 @@ const Property = () => {
                 ))}
               </tbody>
             </table>
+            
+  
+          ) : (
+            <Outlet /> // Show outlet when "id" is in the route
+          )}
           </div>
-          <Outlet/>
         </div>
       </div>
     </div>
