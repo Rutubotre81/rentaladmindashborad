@@ -60,9 +60,7 @@ const Property = () => {
                 <tr>
                   <th scope="col" width="50">#</th>
                   <th scope="col">Property Code</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Mobile no</th>
+                  <th scope="col">Type</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -71,9 +69,8 @@ const Property = () => {
                   <tr key={property.id}>
                     <th scope="row">{property.id}</th>
                     <td>{property.PropertyCode}</td>
-                    <td>{property.PropertyName}</td>
-                    <td>{property.Email}</td>
-                    <td>{property.MobileNo}</td>
+                    <td>{property.Type}</td>
+                 
                     <td>
                       <span className="btn btn-link text-primary">
                         <Link to={`/properties/${property.id}`}>
