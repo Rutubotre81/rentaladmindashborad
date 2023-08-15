@@ -15,7 +15,15 @@ const Tenant=()=>{
 
     });
     
+    
     const navigate = useNavigate();
+    
+    const handleAddProperty =()=> 
+    {
+
+    };
+
+
     return(
         <>
          <div className="App">
@@ -46,7 +54,7 @@ const Tenant=()=>{
                               setNewProperty({...newProperty, Type: e.target.value })}
                               />
                         </div>
-                        <button type="button" className="btn btn-primary" onClick={handleAddTenant}>
+                        <button type="button" className="btn btn-primary" onClick={handleAddProperty}>
           Add Property
         </button>
                     </form>

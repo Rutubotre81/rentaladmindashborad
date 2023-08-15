@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState ,useEffect} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Sidebar from "../sidebarfile/Sidebar";
 import Header from "../headerfile/Header";
@@ -14,6 +14,18 @@ const EditProperty =()=>
         PropertyCode: '',
         Name: '',
     });
+   
+    useEffect(()=>{
+
+    });
+
+    const handleInputChange = event => {
+        const { name, value } = event.target;
+        setTenant(prevProperty => ({
+          ...prevProperty,
+          [name]: value
+        }));
+      };
     const handleFormSubmit = event => {
         event.preventDefault();
     };
@@ -33,7 +45,7 @@ const EditProperty =()=>
                               type="text"
                               className="form-control"
                               value={property.PropertyCode}
-                              onChange=''
+                              onChange={handleInputChange}
                               />
                         </div>
                         <div className="form-group">
@@ -42,7 +54,7 @@ const EditProperty =()=>
                               type="text"
                               className="form-control"
                               value={property.Name}
-                              onChange=''
+                              onChange={handleInputChange}
                               />
                         </div>
                         <button type="submit" className="btn btn-primary">
