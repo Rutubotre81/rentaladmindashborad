@@ -21,7 +21,7 @@ const Property = () => {
               <tr>
                 <th scope="col" width="50">#</th>
                 <th scope="col">Property Code</th>
-                <th scope="col">Name</th>
+                <th scope="col">Type</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>

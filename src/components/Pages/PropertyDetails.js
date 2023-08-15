@@ -16,7 +16,7 @@ const PropertyDetails =()=>{
     <h2>View Property Details</h2>
      <p>Property ID :</p>
      <p>Property Code:</p>  
-     <p>Name:</p> 
+     <p>Type:</p> 
     
     </div>
     </>

@@ -49,7 +49,7 @@ const Header = ({handleToggleSidebar}) => {
                 </Link>
               </li>
               <li>
-                <Link to='/settings' className="dropdown-item" href="settings">
+                <Link to='/changepassword' className="dropdown-item" href="changepassword">
                   Change Password
                 </Link>
               </li>

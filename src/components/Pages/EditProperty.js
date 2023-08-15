@@ -12,7 +12,7 @@ const EditProperty =()=>
 
     const [property ,setProperty] = useState({
         PropertyCode: '',
-        Name: '',
+        Type: '',
     });
    
     useEffect(()=>{
@@ -53,7 +53,7 @@ const EditProperty =()=>
                             <input 
                               type="text"
                               className="form-control"
-                              value={property.Name}
+                              value={property.Type}
                               onChange={handleInputChange}
                               />
                         </div>
