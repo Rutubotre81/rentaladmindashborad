@@ -19,6 +19,28 @@
     padding-left: calc(var(--bs-gutter-x)/ 2);
     margin-top: var(--bs-gutter-y);
 }
+/* Apply styles to the <thead> element */
+.table thead {
+    background-color: #f8f9fa; /* Set your desired background color */
+    font-weight: bold;
+  }
+  
+  /* Center the text and icons in the header cells */
+  .table th {
+    text-align: center;
+  }
+  
+  /* Style the "Add" button to display on a single line */
+  .btn-primary.mb-3 {
+    display: inline-block;
+    margin-right: 10px; /* Add space between the button and the table */
+  }
+  
+  /* Adjust the margin below the table */
+  .table {
+    margin-bottom: 20px; /* Add your preferred margin value */
+  }
+  
 .table {
     --bs-table-bg: transparent;
     --bs-table-striped-color: #212529;
