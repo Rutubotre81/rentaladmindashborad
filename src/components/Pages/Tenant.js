@@ -26,18 +26,18 @@ const Tenant = () => {
       });
   }, []);
 
-  const handleDelete = (tenantId) => {
-    if (window.confirm('Are you sure you want to delete this tenant?')) {
-      axios.delete(`http://127.0.0.1:8000/api/tenants/${tenantId}`)
-        .then(response => {
-          console.log('Tenant deleted:', response.data);
-          navigate('/tenants');
-        })
-        .catch(error => {
-          console.error('Error deleting tenant:', error);
-        });
-    }
-  };
+  // const handleDelete = (tenantId) => {
+  //   if (window.confirm('Are you sure you want to delete this tenant?')) {
+  //     axios.delete(`http://127.0.0.1:8000/api/tenants/${tenantId}`)
+  //       .then(response => {
+  //         console.log('Tenant deleted:', response.data);
+  //         navigate('/tenants');
+  //       })
+  //       .catch(error => {
+  //         console.error('Error deleting tenant:', error);
+  //       });
+  //   }
+  // };
 
 
   return (
@@ -92,12 +92,12 @@ const Tenant = () => {
                           </Link>
                         </span>
                         <span className="btn btn-link text-danger">
-                <button
+                {/* <button
                   className="btn btn-danger btn-sm"
                   onClick={() => handleDelete(tenant.id)}
                 >
                   <i className="fas fa-trash"></i>
-                </button>
+                </button> */}
 
 
                          
