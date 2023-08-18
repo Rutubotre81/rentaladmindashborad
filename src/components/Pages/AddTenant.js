@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from '../sidebarfile/Sidebar';
 import Header from '../headerfile/Header';
-import './Tenent.css';
+
+
+
 import { useNavigate  } from "react-router-dom";
 
 const Tenant = () => {
@@ -33,13 +35,16 @@ const Tenant = () => {
             console.error('Error adding tenant:', error);
           });
       };
+      const handleToggleSidebar = () => {
+        setIsSidebarToggled(prevState => !prevState);
+      };
 
   return (
     <div className="App">
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar />
         <div id="page-content-wrapper">
-          <Header />
+          <Header handleToggleSidebar={handleToggleSidebar}/>
           <div className="col">
           <h2>Add Tenant</h2>
       <form>

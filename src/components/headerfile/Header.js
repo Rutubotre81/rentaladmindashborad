@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = ({handleToggleSidebar}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSidebarToggled, setIsSidebarToggled] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);

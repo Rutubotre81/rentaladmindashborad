@@ -25,7 +25,7 @@
   border-radius: 100%;
 }
 
-#wrapper{
+#wrapper {
   overflow-x: hidden;
   background-image: linear-gradient(
     to right,
@@ -37,7 +37,13 @@
   );
 }
 
+
+
+
+
 #sidebar-wrapper {
+  position: sticky;
+  top: 0;
   min-height: 100vh;
   margin-left: -15rem;
   -webkit-transition: margin 0.25s ease-out;
@@ -45,6 +51,8 @@
   -o-transition: margin 0.25s ease-out;
   transition: margin 0.25s ease-out;
 }
+/* Make the sidebar and navbar sticky */
+
 
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
@@ -78,11 +86,6 @@
   font-weight: bold;
   border: none;
 }
-/* #sidebar-wrapper {
-  margin-left: 0;
-  width: 240px;
-
-} */
 
 @media (min-width: 768px) {
   #sidebar-wrapper {
@@ -98,7 +101,3 @@
     margin-left: -15rem;
   }
 }
-/* #page-content-wrapper {
-  min-width: 0;
-  width: 1500px;
-} */

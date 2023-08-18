@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from '../sidebarfile/Sidebar';
 import Header from '../headerfile/Header';
-import './Tenent.css';
+
+
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const Property = () => {
@@ -11,7 +12,7 @@ const Property = () => {
   const navigate = useNavigate();
 
   const handleToggleSidebar = () => {
-    setIsSidebarToggled(!isSidebarToggled);
+    setIsSidebarToggled(prevState => !prevState);
   };
 
   useEffect(() => {
@@ -42,12 +43,12 @@ const Property = () => {
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar />
         <div id="page-content-wrapper">
-          <Header />
+          <Header  handleToggleSidebar={handleToggleSidebar}/>
           <div className="col">
             {/* Display property list */}
 
 
-            {!window.location.pathname.includes('/tenants/') ? ( 
+            {!window.location.pathname.includes('/properties/') ? ( 
             <table className="table bg-white rounded shadow-sm table-hover">
               <thead>
               <tr>

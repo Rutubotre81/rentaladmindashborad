@@ -9,7 +9,6 @@ const TenantDetails = () => {
   useEffect(() => {
     axios.get(`http://127.0.0.1:8000/api/tenants/${id}`)
       .then(response => {
-        console.log(response.data);
         setTenant(response.data);
       })
       .catch(error => {
@@ -23,7 +22,7 @@ const TenantDetails = () => {
 
   return (
     <div>
-      <h2>View Tenant Details</h2>
+      <h2>Tenant Details</h2>
       <p>Tenant ID: {tenant.id}</p>
       <p>Tenant Code: {tenant.TenantCode}</p>
       <p>Name: {tenant.FirstName}</p>

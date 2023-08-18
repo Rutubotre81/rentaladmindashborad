@@ -1,13 +1,15 @@
+
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Sidebar from '../sidebarfile/Sidebar';
 import Header from '../headerfile/Header';
-import './Tenent.css';
+
 
 const EditTenant = () => {
   const { id } = useParams(); // Get the tenant ID from the route parameters
   const navigate = useNavigate();
+  const [isSidebarToggled, setIsSidebarToggled] = useState(false);
 
   const [tenant, setTenant] = useState({
     TenantCode: '',
@@ -34,20 +36,7 @@ const EditTenant = () => {
       [name]: value
     }));
   };
-
-  const handleFormSubmit = event => {
-    event.preventDefault();
-    // Update tenant data on the server
-    axios.put(`http://127.0.0.1:8000/api/tenants/${id}`, tenant)
-      .then(response => {
-        console.log('Tenant updated:', response.data);
-        // Navigate back to the tenant details page
-        navigate(`/tenants/${id}`);
-      })
-      .catch(error => {
-        console.error('Error updating tenant:', error);
-      });
-  };
+  
   const handleDelete = () => {
     if (window.confirm('Are you sure you want to delete this tenant?')) {
       axios.delete(`http://127.0.0.1:8000/api/tenants/${id}`)
@@ -61,10 +50,18 @@ const EditTenant = () => {
     }
   };
 
-
-
+  const handleFormSubmit = event => {
+    event.preventDefault();
+};
+const handleToggleSidebar = () => {
+  setIsSidebarToggled(prevState => !prevState);
+};
   return (
     <div className="App">
+      <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
+        <Sidebar />
+        <div id="page-content-wrapper">
+          <Header handleToggleSidebar={handleToggleSidebar} />
           <div className="col">
             <h2>Edit Tenant</h2>
             <form onSubmit={handleFormSubmit}>
@@ -117,8 +114,8 @@ const EditTenant = () => {
               </button>
             </form>
           </div>
-        
-     
+        </div>
+</div>     
     </div>
   );
 };

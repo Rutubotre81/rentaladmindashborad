@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from '../sidebarfile/Sidebar';
 import Header from '../headerfile/Header';
-import './Tenent.css';
+
 import { Link, Outlet, useNavigate  } from "react-router-dom";
 
 const Tenant = () => {
@@ -12,9 +12,11 @@ const Tenant = () => {
   
   const navigate = useNavigate();
 
+
   const handleToggleSidebar = () => {
-    setIsSidebarToggled(!isSidebarToggled);
+    setIsSidebarToggled(prevState => !prevState);
   };
+ 
 
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/tenants')
@@ -45,22 +47,25 @@ const Tenant = () => {
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar />
         <div id="page-content-wrapper">
-          <Header />
+          <Header  handleToggleSidebar={handleToggleSidebar}/>
           <div className="col">
-            <h2>Tenants </h2>
-          <Link to="/tenants/add"
-              className="btn btn-primary mb-3"
-             
-            >
-              <i className="fas fa-plus"></i>
-            </Link>
-
+          
           
 
 
             {!window.location.pathname.includes('/tenants/') ? ( // Check if "id" is in the route
               <table className="table bg-white rounded shadow-sm table-hover">
                 <thead>
+                <tr>
+                <th colSpan="6">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h2 className="property-heading">Tenants</h2>
+                    <Link to="/tenants/add" className="btn btn-primary mb-3">
+                    <i className="fas fa-plus"></i>
+                    </Link>
+                  </div>
+                </th>
+              </tr>
                   <tr>
                     <th scope="col" width="50">#</th>
                     <th scope="col">Tenant Code</th>

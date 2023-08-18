@@ -8,7 +8,7 @@ const Home = () => {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
 
   const handleToggleSidebar = () => {
-    setIsSidebarToggled(!isSidebarToggled);
+    setIsSidebarToggled(prevState => !prevState);
   };
 
  
@@ -18,7 +18,7 @@ const Home = () => {
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar/> {/* Pass openDashboard function to Sidebar */}
         <div id="page-content-wrapper">
-          <Header/>
+          <Header  handleToggleSidebar={handleToggleSidebar}/>
            <Middle />
         </div>
       </div>

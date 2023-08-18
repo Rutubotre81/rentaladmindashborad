@@ -7,7 +7,7 @@ const Sidebar=()=>
     return(
         <>
         
-        <div className="bg-white" id="sidebar-wrapper">
+        <div className="bg-white sidebar" id="sidebar-wrapper">
       <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
         <i className="fas fa-user-secret me-2"></i>Rental-Manager
       </div>
