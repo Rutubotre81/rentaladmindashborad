@@ -59,7 +59,7 @@ const Tenant = () => {
                   }
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group" >
                 <label>First Name</label>
                 <input
                   type="text"
@@ -70,7 +70,7 @@ const Tenant = () => {
                   }
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group" >
                 <label>Last Name</label>
                 <input
                   type="text"

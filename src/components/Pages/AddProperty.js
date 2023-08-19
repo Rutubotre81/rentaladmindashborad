@@ -85,6 +85,7 @@ const Property = () => {
                     setNewProperty({ ...newProperty, HouseNo: e.target.value })
                   }
                 />
+                </div>
                  <div className="form-group">
                 <label>Floor Number</label>
                 <input
@@ -96,7 +97,7 @@ const Property = () => {
                   }
                 />
               </div>
-              </div>
+            
               <div className="form-group">
                 <label>Building Number</label>
                 <input
@@ -223,6 +224,7 @@ const Property = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

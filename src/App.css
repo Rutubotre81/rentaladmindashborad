@@ -36,25 +36,23 @@
     #ddfaef
   );
 }
-
-
-
-
-
 #sidebar-wrapper {
-  position: sticky;
-  top: 0;
   min-height: 100vh;
   margin-left: -15rem;
   -webkit-transition: margin 0.25s ease-out;
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
   transition: margin 0.25s ease-out;
+  overflow: auto;
+
 }
-/* Make the sidebar and navbar sticky */
+#sidebar-wrapper div {
+  position: sticky;
+  top: 0;
+}
 
 
-#sidebar-wrapper .sidebar-heading {
+#sidebar-wrapper  .sidebar-heading{
   padding: 0.875rem 1.25rem;
   font-size: 1.2rem;
 }
@@ -67,6 +65,10 @@
   min-width: 100vw;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+}
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
 }
@@ -101,3 +103,32 @@
     margin-left: -15rem;
   }
 }
+h2 {
+  text-align: center;
+}
+.col {
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+}
+form{
+  text-align: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+form div {
+margin-left:40px ;
+width: 40%;
+display: inline-block;
+}
+form button {
+margin-top:5% ;
+padding: 20px;
+text-align: center;
+width:20% ;
+}
+
+
+
