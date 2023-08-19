@@ -132,3 +132,36 @@ width:20% ;
 
 
 
+
+@media screen and (max-width:320px ) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+ .col {
+  padding: 0%;
+  margin: 0%;
+ }
+  form div {
+
+width: 70%;
+
+}
+form button {
+margin-top:5% ;
+padding: 10px;
+text-align: center;
+width:50% ;
+}
+
+
+}
