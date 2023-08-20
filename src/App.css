@@ -9,6 +9,10 @@
   color: var(--main-text-color);
 }
 
+/* .App{
+  display: flex;
+
+} */
 .second-text {
   color: var(--second-text-color);
 }
@@ -44,10 +48,13 @@
   -o-transition: margin 0.25s ease-out;
   transition: margin 0.25s ease-out;
   overflow: auto;
+  position: fixed; 
+  height: 100vh;
+ 
 
 }
 #sidebar-wrapper div {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
 }
 
@@ -75,6 +82,15 @@ nav {
 
 #menu-toggle {
   cursor: pointer;
+}
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px;
+  /* transition: margin-left 0.3s ease; */
+}
+.toggled .main-content {
+  margin-left: 10px;/* Adjust this value according to your sidebar width */
 }
 
 .list-group-item {
