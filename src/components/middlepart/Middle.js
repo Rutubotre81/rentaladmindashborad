@@ -3,8 +3,8 @@ import React from "react";
 const Middle=()=>{
     return(
         <>
-
-     
+     <div className="scrollable-content">
+     <div className="container">
       <div className="container-fluid px-4">
         <div className="row g-3 my-2">
           <div className="col-md-3">
@@ -136,7 +136,8 @@ const Middle=()=>{
           </div>
         </div>
       </div>
- 
+      </div>
+      </div>
 
         </>
     )

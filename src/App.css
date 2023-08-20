@@ -25,7 +25,7 @@
   border-radius: 100%;
 }
 
-#wrapper{
+#wrapper {
   overflow-x: hidden;
   background-image: linear-gradient(
     to right,
@@ -36,7 +36,6 @@
     #ddfaef
   );
 }
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
@@ -44,9 +43,16 @@
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
   transition: margin 0.25s ease-out;
+  overflow: auto;
+
+}
+#sidebar-wrapper div {
+  position: sticky;
+  top: 0;
 }
 
-#sidebar-wrapper .sidebar-heading {
+
+#sidebar-wrapper  .sidebar-heading{
   padding: 0.875rem 1.25rem;
   font-size: 1.2rem;
 }
@@ -59,6 +65,10 @@
   min-width: 100vw;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+}
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
 }
@@ -78,11 +88,6 @@
   font-weight: bold;
   border: none;
 }
-/* #sidebar-wrapper {
-  margin-left: 0;
-  width: 240px;
-
-} */
 
 @media (min-width: 768px) {
   #sidebar-wrapper {
@@ -98,7 +103,65 @@
     margin-left: -15rem;
   }
 }
-/* #page-content-wrapper {
-  min-width: 0;
-  width: 1500px;
-} */
+h2 {
+  text-align: center;
+}
+.col {
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+}
+form{
+  text-align: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+form div {
+margin-left:40px ;
+width: 40%;
+display: inline-block;
+}
+form button {
+margin-top:5% ;
+padding: 20px;
+text-align: center;
+width:20% ;
+}
+
+
+
+
+@media screen and (max-width:320px ) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+ .col {
+  padding: 0%;
+  margin: 0%;
+ }
+  form div {
+
+width: 70%;
+
+}
+form button {
+margin-top:5% ;
+padding: 10px;
+text-align: center;
+width:50% ;
+}
+
+
+}

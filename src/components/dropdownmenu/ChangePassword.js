@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './style.css';
 
-const Settings = () => {
+
+const ChangePassword = () => {
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -98,4 +98,4 @@ const Settings = () => {
   );
 };
 
-export default  Settings;
+export default  ChangePassword;

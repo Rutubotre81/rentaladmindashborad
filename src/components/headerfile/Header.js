@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Profile from "../dropdownmenu/Profile";
+import { Link } from "react-router-dom";
 
 const Header = ({handleToggleSidebar}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSidebarToggled, setIsSidebarToggled] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -44,19 +45,19 @@ const Header = ({handleToggleSidebar}) => {
               aria-labelledby="navbarDropdown"
             >
               <li>
-                <a className="dropdown-item" href="profile" >
+                <Link to='/profile' className="dropdown-item" href="profile" >
                   Profile
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="dropdown-item" href="settings">
-                  Settings
-                </a>
+                <Link to='/changepassword' className="dropdown-item" href="changepassword">
+                  Change Password
+                </Link>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <Link  to='/' className="dropdown-item" href="#">
                   Logout
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
