@@ -9,6 +9,7 @@ import AddTenant from './Pages/AddTenant';
 import EditProperty from './Pages/EditProperty';
 import PropertyDetails from './Pages/PropertyDetails';
 import AddProperty from './Pages/AddProperty';
+import EditOwner from './Pages/EditOwner';
 
 const DashboardLayout = () => {
   return (
@@ -22,6 +23,7 @@ const DashboardLayout = () => {
         <Route path="/properties/:id/edit" element={<EditProperty />} />
           <Route path="/tenant" element={<Tenant />}/>  
           <Route path="tenants/add" element={<AddTenant />} />
+          <Route path="/profile" element={<EditOwner />}/>
         
          {/* <Route path=":id/edit" element={<EditTenant />} />
          <Route path=":id" element={<TenantDetails/>}/> */}

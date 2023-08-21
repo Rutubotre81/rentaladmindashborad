@@ -4,16 +4,16 @@ import axios from 'axios';
 import Sidebar from '../sidebarfile/Sidebar';
 import Header from '../headerfile/Header';
 
-const EditTenant = () => {
+const EditOwner = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [newTenant, setNewTenant] = useState({
-    TenantCode: '',
+  const [newOwner, setNewOwner] = useState({
+    OwnerCode: '',
     FirstName: '',
     LastName: '',
-    EmailID: '',
     MobileNo: '',
+    EmailID: '',
     AddressL1: '',
     UserName: '',
     Password: '',
@@ -22,25 +22,25 @@ const EditTenant = () => {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/tenants/${id}`)
+    axios.get(`http://127.0.0.1:8000/api/owners/${6}`)
       .then(response => {
-        setNewTenant(response.data);
+        setNewOwner(response.data);
       })
       .catch(error => {
-        console.error('Error fetching tenant data:', error);
+        console.error('Error fetching owner data:', error);
       });
   }, [id]);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    axios.put(`http://127.0.0.1:8000/api/tenants/${id}`, newTenant)
+    axios.put(`http://127.0.0.1:8000/api/owners/${6}`, newOwner)
       .then(response => {
-        console.log('Tenant updated:', response.data);
-        navigate('/tenants'); // Redirect after successful update
+        console.log('Owner updated:', response.data);
+        navigate('/owners'); // Redirect after successful update
       })
       .catch(error => {
-        console.error('Error updating tenant:', error);
+        console.error('Error updating owner:', error);
       });
   };
 
@@ -55,16 +55,16 @@ const EditTenant = () => {
         <div id="page-content-wrapper">
           <Header handleToggleSidebar={handleToggleSidebar}/>
           <div className="col">
-            <h2>Edit Tenant</h2>
+            <h2>Edit Owner</h2>
             <form onSubmit={handleFormSubmit}>
               <div className="form-group">
-                <label>Tenant Code</label>
+                <label>Owner Code</label>
                 <input
                   type="text"
                   className="form-control"
-                  value={newTenant.TenantCode}
+                  value={newOwner.OwnerCode}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, TenantCode: e.target.value })
+                    setNewOwner({ ...newOwner, OwnerCode: e.target.value })
                   }
                 />
               </div>
@@ -73,9 +73,9 @@ const EditTenant = () => {
                 <input
                   type="text"
                   className="form-control"
-                  value={newTenant.FirstName}
+                  value={newOwner.FirstName}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, FirstName: e.target.value })
+                    setNewOwner({ ...newOwner, FirstName: e.target.value })
                   }
                 />
               </div>
@@ -84,9 +84,20 @@ const EditTenant = () => {
                 <input
                   type="text"
                   className="form-control"
-                  value={newTenant.LastName}
+                  value={newOwner.LastName}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, LastName: e.target.value })
+                    setNewOwner({ ...newOwner, LastName: e.target.value })
+                  }
+                />
+              </div>
+              <div className="form-group">
+                <label>Mobile Number</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={newOwner.MobileNo}
+                  onChange={(e) =>
+                    setNewOwner({ ...newOwner, MobileNo: e.target.value })
                   }
                 />
               </div>
@@ -95,20 +106,9 @@ const EditTenant = () => {
                 <input
                   type="email"
                   className="form-control"
-                  value={newTenant.EmailID}
+                  value={newOwner.EmailID}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, EmailID: e.target.value })
-                  }
-                />
-              </div>
-              <div className="form-group">
-                <label>Mobile no</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  value={newTenant.MobileNo}
-                  onChange={(e) =>
-                    setNewTenant({ ...newTenant, MobileNo: e.target.value })
+                    setNewOwner({ ...newOwner, EmailID: e.target.value })
                   }
                 />
               </div>
@@ -117,20 +117,20 @@ const EditTenant = () => {
                 <input
                   type="text"
                   className="form-control"
-                  value={newTenant.AddressL1}
+                  value={newOwner.AddressL1}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, AddressL1: e.target.value })
+                    setNewOwner({ ...newOwner, AddressL1: e.target.value })
                   }
                 />
               </div>
               <div className="form-group">
-                <label>UserName</label>
+                <label>Username</label>
                 <input
                   type="text"
                   className="form-control"
-                  value={newTenant.UserName}
+                  value={newOwner.UserName}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, UserName: e.target.value })
+                    setNewOwner({ ...newOwner, UserName: e.target.value })
                   }
                 />
               </div>
@@ -139,9 +139,9 @@ const EditTenant = () => {
                 <input
                   type="password"
                   className="form-control"
-                  value={newTenant.Password}
+                  value={newOwner.Password}
                   onChange={(e) =>
-                    setNewTenant({ ...newTenant, Password: e.target.value })
+                    setNewOwner({ ...newOwner, Password: e.target.value })
                   }
                 />
               </div>
@@ -156,4 +156,4 @@ const EditTenant = () => {
   );
 };
 
-export default EditTenant;
+export default EditOwner;
