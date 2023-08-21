@@ -7,8 +7,7 @@ const Sidebar=()=>
     return(
         <>
         
-        <div className="bg-white" id="sidebar-wrapper">
-          <div className="sidebar">
+    <div  className="sidebar bg-white" id="sidebar-wrapper">
       <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
         <i className="fas fa-user-secret me-2"></i>Rental-Manager
       </div>
@@ -27,7 +26,6 @@ const Sidebar=()=>
           <Link to="/logout" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
           <i className="fas fa-power-off me-2"></i>Logout
         </Link>
-     </div>
      </div>
     </div> 
 

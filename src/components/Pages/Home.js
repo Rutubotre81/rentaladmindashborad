@@ -26,7 +26,7 @@ const Home = () => {
      } */}
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar/> {/* Pass openDashboard function to Sidebar */}
-        <div id="page-content-wrapper">
+        <div className="main-content" id="page-content-wrapper">
           <Header  handleToggleSidebar={handleToggleSidebar}/>
            <Middle />
         </div>

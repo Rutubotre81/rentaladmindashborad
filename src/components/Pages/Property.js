@@ -42,7 +42,7 @@ const Property = () => {
     <div className="App">
       <div className={`d-flex ${isSidebarToggled ? 'toggled' : ''}`} id="wrapper">
         <Sidebar />
-        <div id="page-content-wrapper">
+        <div className="main-content" id="page-content-wrapper">
           <Header  handleToggleSidebar={handleToggleSidebar}/>
           <div className="col">
             {/* Display property list */}
