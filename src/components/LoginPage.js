@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,  } from "react-router-dom";
 import axios from "axios"; // Import Axios library
+// import { useNavigate } from 'react-router-dom';
+
 
 const LoginPage = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
+ 
+  // const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Replace 'YOUR_API_ENDPOINT' with your actual API endpoint
-    const apiUrl = 'http://127.0.0.1:8000/api/login';
+    const apiUrl = 'http://127.0.0.1:8000/login';
 
     axios.post(apiUrl, {
       email: email,
@@ -20,6 +24,8 @@ const LoginPage = (props) => {
     .then((response) => {
       // Handle successful login here
       setMessage('Login successful!');
+     // navigate('/home');
+    
       // You can redirect the user or perform any other actions upon successful login
     })
     .catch((error) => {

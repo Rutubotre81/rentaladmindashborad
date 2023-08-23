@@ -20,6 +20,7 @@ const DashboardLayout = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />}/>
           <Route path="/property" element={<Property />} />
           <Route path="properties/add" element={<AddProperty />} />
           <Route path="/properties/:id" element={<PropertyDetails />} />
@@ -27,8 +28,8 @@ const DashboardLayout = () => {
           <Route path="/tenant" element={<Tenant />}/>  
           <Route path="tenants/add" element={<AddTenant />} />
            <Route path="/profile" element={<EditOwner />}/>
-           <Route path='/' element={<LoginPage />}/> 
-          <Route path='/' element={<RegisterPage />}/>
+           <Route path='/login' element={<LoginPage />}/> 
+          <Route path='/register' element={<RegisterPage />}/>
         
          {/* <Route path=":id/edit" element={<EditTenant />} />
          <Route path=":id" element={<TenantDetails/>}/> */}
